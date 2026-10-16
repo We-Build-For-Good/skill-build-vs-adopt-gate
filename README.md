@@ -26,19 +26,19 @@ Before writing code, the AI must search package registries and GitHub, issuing a
 
 ### For Claude Code
 ```bash
-git clone https://github.com/webuildforgood/skill-build-vs-adopt-gate.git ~/.claude/skills/build-vs-adopt-gate
+git clone https://github.com/We-Build-For-Good/skill-build-vs-adopt-gate.git ~/.claude/skills/build-vs-adopt-gate
 ```
 
 ### For Cursor
 ```bash
 mkdir -p .cursor/skills
-git clone https://github.com/webuildforgood/skill-build-vs-adopt-gate.git .cursor/skills/build-vs-adopt-gate
+git clone https://github.com/We-Build-For-Good/skill-build-vs-adopt-gate.git .cursor/skills/build-vs-adopt-gate
 ```
 
 ### For Antigravity / Open Agent Skills
 ```bash
 mkdir -p .agents/skills
-git clone https://github.com/webuildforgood/skill-build-vs-adopt-gate.git .agents/skills/build-vs-adopt-gate
+git clone https://github.com/We-Build-For-Good/skill-build-vs-adopt-gate.git .agents/skills/build-vs-adopt-gate
 ```
 
 ---
