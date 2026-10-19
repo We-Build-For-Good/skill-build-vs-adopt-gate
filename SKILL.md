@@ -1,6 +1,6 @@
 ---
 name: build-vs-adopt-gate
-description: Pre-code engineering discipline protocol that stops AI coding agents from reflexively building tools, utilities, or components from scratch. Mandates an adversarial search for battle-tested open-source libraries before writing code, ending in an explicit one-line verdict: ADOPT, FORK, or BUILD.
+description: "Pre-code engineering discipline protocol that stops AI coding agents from reflexively building tools, utilities, or components from scratch. Mandates an adversarial search for battle-tested open-source libraries before writing code, ending in an explicit one-line verdict: ADOPT, FORK, or BUILD."
 license: MIT
 metadata:
   author: We Build for Good
