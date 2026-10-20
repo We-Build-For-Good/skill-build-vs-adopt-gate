@@ -1,10 +1,10 @@
 ---
 name: build-vs-adopt-gate
-description: "Pre-code engineering discipline protocol that stops AI coding agents from reflexively building tools, utilities, or components from scratch. Mandates an adversarial search for battle-tested open-source libraries before writing code, ending in an explicit one-line verdict: ADOPT, FORK, or BUILD."
+description: "Pre-code engineering discipline protocol that stops AI coding agents from reflexively building tools, utilities, or components from scratch. Mandates an adversarial search for battle-tested open-source libraries before writing code, ending in an explicit one-line verdict: ADOPT, FORK-AND-EXTEND, or BUILD. For a full written brief with a checker, use skill-does-this-exist."
 license: MIT
 metadata:
   author: We Build for Good
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Build-vs-Adopt Gate: Pre-Code Engineering Discipline
@@ -39,7 +39,7 @@ Before speccing or writing code for any net-new utility, tool, or technical modu
 * Do not rely solely on keyword greps: search for mature open-source solutions with community traction, active maintenance, and permissive licenses.
 
 ### Step 2: The Three-Way Comparison
-* Identify the top 2 existing battle-tested libraries.
+* Identify the top 2 existing libraries, and record where you searched.
 * Compare:
   * Maintenance & GitHub stars.
   * Dependency footprint and bundle size.
@@ -50,12 +50,12 @@ Before speccing or writing code for any net-new utility, tool, or technical modu
 The AI must output a formal, one-line engineering verdict before writing code:
 
 * **ADOPT [Package Name]**: The existing tool satisfies requirements. Install it and configure it.
-* **FORK / EXTEND [Package Name]**: An existing package solves 80% of the problem. Import it and wrap it with our specific domain logic.
-* **BUILD**: Exhaustive search confirmed no suitable package exists, or existing options fail non-negotiable security/licensing constraints. Detail the exact hard constraint that disqualified existing solutions.
+* **FORK-AND-EXTEND [Package Name]**: An existing package solves 80% of the problem. Import it and wrap it with our specific domain logic.
+* **BUILD**: The search found no suitable package, or existing options fail non-negotiable security/licensing constraints. Detail the exact hard constraint that disqualified existing solutions.
 
 ---
 
-## Canonical Output Schema
+## Example Output (illustrative)
 
 ```markdown
 ### Build-vs-Adopt Gate
@@ -64,5 +64,7 @@ The AI must output a formal, one-line engineering verdict before writing code:
   1. `whisper.cpp` (Open-source C/C++ port of Whisper, MIT, local, active).
   2. `fluent-ffmpeg` (Node wrapper for media extraction).
 * **Verdict**: **ADOPT** `whisper.cpp` via local binary wrapper.
-* **Rationale**: Re-implementing a custom WebAudio speech-to-text model from scratch would take weeks and yield inferior accuracy. Wrapping `whisper.cpp` satisfies all privacy and local-execution requirements in under 20 lines of glue code.
+* **Rationale**: Re-implementing a custom WebAudio speech-to-text model from scratch would take weeks and yield inferior accuracy. Wrapping `whisper.cpp` meets the privacy and local-execution requirements with a thin wrapper.
 ```
+
+For new products or larger features, write the full brief with [skill-does-this-exist](https://github.com/We-Build-For-Good/skill-does-this-exist), whose CLI rejects briefs with placeholder candidates or missing URLs.

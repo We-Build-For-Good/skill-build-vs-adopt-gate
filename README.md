@@ -17,8 +17,10 @@ It prevents the common failure mode where an AI coding agent writes hundreds of 
 
 Before writing code, the AI must search package registries and GitHub, issuing an explicit one-line verdict:
 * **ADOPT [Package]**: Use the existing library directly.
-* **FORK / EXTEND [Package]**: Wrap or extend an existing library.
+* **FORK-AND-EXTEND [Package]**: Wrap or extend an existing library.
 * **BUILD**: Only permitted when existing libraries fail a hard, non-negotiable constraint.
+
+This is the quick, one-line version. For a full written brief with an automated checker, see [skill-does-this-exist](https://github.com/We-Build-For-Good/skill-does-this-exist).
 
 ---
 
